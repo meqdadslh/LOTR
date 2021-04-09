@@ -67,7 +67,7 @@ const makeMiddleEarth = () => {
 const makeHobbits = () => {
     // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
     // 1. create a 'ul'
-    const $ul = $("<ul>")
+    const $ul = $("<ul>").addClass("hob")
         // 2. make each hobbit an li element and append it to the 'ul' you just created
         // hint: use the given 'hobbits' array and use a for loop
     for (hobbit of hobbits) {
@@ -157,6 +157,26 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
     // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
     // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+
+    const $hobbits = $(".hob")
+    const Rivendell = $("#rivendell")
+    $(".hob").detach().appendTo("#Rivendell");
+
+    // $(".hob").click(function() {
+    //     $(this).toggleClass("off");
+    // });
+    // let.hob;
+    // $("button").click(function() {
+    //     if (.hob) {
+    //         .hob.appendTo("#The-Shire");
+    //         .hob = null;
+    //     } else {
+    //         .hob = $(".hob").detach();
+    //     }
+    // });
+
+    // $("#Rivendell").appendTo($.hob)
+
 
 };
 
