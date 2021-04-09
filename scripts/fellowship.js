@@ -134,9 +134,9 @@ const makeBuddies = () => {
     $("#middle-earth").append($aside)
         // 2. display an unordered list of buddies in the aside
     const $ul = $("<ul>")
-    for (baddy of baddies) {
-        const $li = $("<li>").text(baddy)
-        $li.addClass("baddy")
+    for (buddy of buddies) {
+        const $li = $("<li>").text(buddy)
+        $li.addClass("buddy")
         $ul.append($li)
     }
 
@@ -162,21 +162,6 @@ const leaveTheShire = () => {
     const Rivendell = $("#rivendell")
     $(".hob").detach().appendTo("#Rivendell");
 
-    // $(".hob").click(function() {
-    //     $(this).toggleClass("off");
-    // });
-    // let.hob;
-    // $("button").click(function() {
-    //     if (.hob) {
-    //         .hob.appendTo("#The-Shire");
-    //         .hob = null;
-    //     } else {
-    //         .hob = $(".hob").detach();
-    //     }
-    // });
-
-    // $("#Rivendell").appendTo($.hob)
-
 
 };
 
@@ -187,6 +172,18 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
+
+    const buddies = [
+        'Gandalf the Grey',
+        'Legolas',
+        'Gimli',
+        'Strider',
+        'Boromir'
+    ];
+    buddies[3] = "Aregorn";
+    document.getElementById("demo").innerHTML = buddies[3];
+    console.log(buddies[3]);
+
 
     // 1. change the buddy 'Strider' textnode to "Aragorn"
     // hint: You can get a list of elements by tag name, such as 'aside'
@@ -202,12 +199,21 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
     // 1. create a new div with an id 'the-fellowship'
+    const $div = $("<div>")
+    $div.attr("id", "the-fellowship")
 
     // 2. add an h1 with the text 'The Fellowship' to this new div
+    const $h1 = $("<h1>").text("The - Fellowship")
+    $h1.addClass("fellowship")
+    $div.append($h1)
+        // 3. append the fellowship to middle-earth
+    $("#middle-earth").append($div)
 
-    // 3. append the fellowship to middle-earth
+    //4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-    // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+    // const $hobbits = $(".hob")
+    // const $div = $("#the-fellowship")
+    // $div.append($ ".hob");
 
 };
 
