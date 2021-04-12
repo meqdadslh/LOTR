@@ -189,7 +189,7 @@ const beautifulStranger = () => {
     // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
-
+//$()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -211,9 +211,9 @@ const forgeTheFellowShip = () => {
 
     //4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-    // const $hobbits = $(".hob")
-    // const $div = $("#the-fellowship")
-    // $div.append($ ".hob");
+    $('.hobbit').appendTo($div);
+    $('.buddy').appendTo($div);
+
 
 };
 
@@ -224,10 +224,12 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
-
     // 1. change the 'Gandalf' text to 'Gandalf the White'
 
+    $(".buddy").eq(0).text("Gandalf the White");
+
     // 2. add a class "the-white" to this element
+    $(".buddy").eq(0).addClass("the-white")
 
     // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
@@ -256,6 +258,7 @@ const hornOfGondor = () => {
 // Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
+
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
