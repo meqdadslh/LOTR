@@ -173,16 +173,15 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
-    const buddies = [
-        'Gandalf the Grey',
-        'Legolas',
-        'Gimli',
-        'Strider',
-        'Boromir'
-    ];
-    buddies[3] = "Aregorn";
-    document.getElementById("demo").innerHTML = buddies[3];
-    console.log(buddies[3]);
+    // const buddies = [
+    //     'Gandalf the Grey',
+    //     'Legolas',
+    //     'Gimli',
+    //     'Strider',
+    //     'Boromir'
+    // ];
+    // buddies[3] = "Aregorn";
+    $(".buddy").eq(3).text("Aregon");
 
 
     // 1. change the buddy 'Strider' textnode to "Aragorn"
@@ -244,10 +243,13 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
     // 1. create a pop-up alert that the horn of gondor has been blown
+    alert("horn of gondor has been blown");
 
     // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+    $(".buddy").eq(4).css("text-decoration", "line-through")
 
     // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+    // $("#Mordor li").eq(2).detach();
 
 };
 
