@@ -173,14 +173,6 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
-    // const buddies = [
-    //     'Gandalf the Grey',
-    //     'Legolas',
-    //     'Gimli',
-    //     'Strider',
-    //     'Boromir'
-    // ];
-    // buddies[3] = "Aregorn";
     $(".buddy").eq(3).text("Aregon");
 
 
@@ -249,7 +241,7 @@ const hornOfGondor = () => {
     $(".buddy").eq(4).css("text-decoration", "line-through")
 
     // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-    // $("#Mordor li").eq(2).detach();
+    $("#Mordor li").eq(2).detach();
 
 };
 
@@ -263,8 +255,15 @@ const itsDangerousToGoAlone = () => {
 
 
     // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+    $(".hobbit").eq(0).detach().appendTo("#Mordor");
+    $(".hobbit").eq(1).detach().appendTo("#Mordor");
+
 
     // 2. add a div with an id of 'mount-doom' to Mordor
+
+    const $div = $("<div>")
+    $div.attr("id", "mount-doom")
+    $("#Mordor").append($div)
 
 };
 
